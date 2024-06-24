@@ -1,0 +1,22 @@
+h1{
+    color: blue;
+    background-color: yellow;
+}
+
+body{
+    background-color: pink;
+}
+button{
+    background-color: blue;
+    color: white;
+}
+
+.para{
+    background-color: slategray;
+}
+.box{
+    height: 60px;
+    width: 60px;
+    border: 2px solid red;
+    margin: 5px;
+}

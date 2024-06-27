@@ -1,0 +1,21 @@
+div{
+   height: 100px;
+   width: 100px;
+   background-color: rgb(114, 114, 233);
+   color: white; 
+   border: 2px solid red;   
+}
+
+.dark{
+   background-color: black;
+   color: white;
+   font-size: 16px; /* Example font size for dark mode */
+   font-family: 'Times New Roman', serif; /* Example font family for light mode */
+}
+
+.white{
+   background-color: white;
+   color: black;
+   font-size: 16px; /* Example font size for light mode */
+   font-family: medium; /* Example font family for light mode */
+}

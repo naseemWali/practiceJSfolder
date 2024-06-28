@@ -24,7 +24,6 @@ const winpatterns=[
 const resetgame=() => {
  turno=true;
  msgcontainer.classList.add("hide")
-
     enabledboxes();
 }
 
@@ -85,6 +84,8 @@ const checkwinner=() => {
 };
 
 
+newgamebtn.addEventListener("click",resetgame);
+resetbtn.addEventListener("click",resetgame)
 
 
 

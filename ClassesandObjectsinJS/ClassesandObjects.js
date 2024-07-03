@@ -155,9 +155,7 @@ class person {
 class Enginer extends person{
     constructor(branch,a,b){
         super(a,b); // to invoke parent class constructor
-        this.newbranch=branch
-       
-        
+        this.newbranch=branch       
     }
  work(){
     super.eat(); // if we want to add/print first eat function then work function then we do super.eat();

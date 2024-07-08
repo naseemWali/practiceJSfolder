@@ -99,18 +99,18 @@ calculate(12,11,(c,d)=> {
 //.Rejected:the result is an error object           reject(error)
 
 //  promise use in general programming
-function getData(dataId,getNextData) {
-    return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-            console.log("data",dataId);
-            // resolve("success");
-            reject("sorry error")
-            if (getNextData) {
-                getNextData();
-            }
-        }, 6000);
-    })  ;
-}
+// function getData(dataId,getNextData) {
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             console.log("data",dataId);
+//             // resolve("success");
+//             reject("sorry error")
+//             if (getNextData) {
+//                 getNextData();
+//             }
+//         }, 6000);
+//     })  ;
+// }
 
 
 // getData(1, () => {
@@ -211,10 +211,205 @@ async function hello() {
 // IIFE:Immediately call/invoked function expression  (iffes) is a function that is called immediately as soon as it is defined.
 // iife syntax:(func) ();
 
+// promises chapter  once again
 
+// let promise =new Promise((resolve, reject) => {
+//     console.log("hello promises");
+// })
+
+// function getdata (dataId,getNextData) {
+// return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log("data" ,dataId);
+//         resolve("success")
+//         if (getNextData) {
+//             getNextData();
+//         }
+//     }, 5000);
+// });
+// }
+ 
+// let result = getdata(123);
+
+// promise basics
+
+// const getPromise=()=>{
+// return new Promise((resolve, reject) => {
+//     console.log("this is a simple promise function");
+//     resolve("success");
+//     reject("oops error");
+// })
+
+// }
+// let newresult=getPromise();
+
+// newresult.then(()=>{
+//     console.log("promise fullfilled");
+// });
+
+// newresult.catch(()=>{
+//     console.log("error occured");
+// });
+
+// promise chaining
+
+// function asyncFunc1() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("some data one.");
+//             resolve("successfully")
+//         }, 5000);
+//     });
+// }
+
+// function asyncFunc2() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("some data two.");
+//             resolve("successfully")
+//         }, 5000);
+//     });
+// }
+
+
+
+// console.log("fetching data one.....");
+// let x1=asyncFunc1();
+// x1.then((res)=>{
+//     console.log(res);
+//     console.log("fethching data two");
+//     let x2=asyncFunc2();
+//     x2.then(()=>{
+//         console.log("successfully");
+//     })
+// });
+
+// Doing chaining on callback using promises
+
+
+// let promise =new Promise((resolve, reject) => {
+//     console.log("hello promises");
+// })
+
+
+function getdata (dataId) {
+return new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log("data" ,dataId);
+        resolve("successfully")
+        // if (getNextData) {
+        //     getNextData();
+        // }
+    }, 5000);
+});
+}
+ 
+
+// let result=getdata(123);
+// // applying promise chaining on callbacks
+// console.log("we are fethching data one");
+// result.then(()=>{
+//     console.log("completed");
+// })
+
+ // seconnd method
+//  console.log("we are fethching data one");
+//  getdata(1).then(()=>{
+//     console.log("completed  one");
+//     getdata(2).then(()=>{
+//         console.log("completed two");
+//         getdata(3).then(()=>{
+//             console.log("completed three");
+//         })
+//     })
+//  })
+ 
+  // thrid method which is called actual promise chaining
+//   getdata(1).then((res)=>{
+//     console.log("completed one",res);
+//     return getdata(2);
+//   }).then((res)=>{
+//     console.log("completed two",res);
+//     return getdata(3);
+//   }).then((res)=>{
+//     console.log("completed three",res);
+//   })
+
+  // Async Await
+   async function hello(){
+   console.log("123");
+   };
+
+   hello();
+   // second example
+   async function api(dataId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("our data",dataId);
+            resolve("completion")
+        }, 4000);
+    })
+   }
+   // making async-awit function (iife) for immediately invoke
+  (async function ourData() {
+    await api(1);
+    await api(2);
+    await api(3);
+   })();
+  
+   
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+
+
+   
+   
+   
+    
+
+
+   
  
 
 
+   
 
 
 
@@ -232,6 +427,223 @@ async function hello() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+   
+
+    
+    
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   
+   
+    
+    
+    
+   
+    
+    
+  
+   
 
 
 

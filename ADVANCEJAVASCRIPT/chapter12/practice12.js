@@ -77,3 +77,23 @@ function stopAudio() {
     audio.pause();
     audio.currentTime = 0; // Reset to start
 }
+
+// Arrow functions revisited
+
+const object={
+    name:"naseem wali khan",
+    class:12,
+    age:24,
+    show:function () {
+
+        let that=this // this is first solution to print name and age actually what will  do here that this refers to object that will store in that .
+        // second solution is to make set timeout function an arrow function because arrow functions prevoke lexical this.
+        setTimeout(() => {
+            console.log(`the name is ${this.name},the age is ${this.age}`);
+        },3000)      
+    }
+}
+object.show();
+
+
+

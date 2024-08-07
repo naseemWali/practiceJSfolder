@@ -58,8 +58,7 @@ console.log(simpleinterest(1000,5,1));
 // how to play an audio on js
 // Create a new Audio object and specify the audio file
 // Create a new Audio object with the URL to an audio file
-const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
-
+const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')
 // Function to play the audio
 function playAudio() {
     audio.play().catch(error => {
